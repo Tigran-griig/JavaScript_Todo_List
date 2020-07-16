@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.muicss.com/mui-latest/css/mui.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.muicss.com/mui-latest/js/mui.min.js"></script>
+  <title>PODAKAST APP</title>
+</head>
+
+<body>
+  <button class="mui-btn mui-btn--fab mui-btn--primary floating-btn" id ="modal-btn">Մուտք</button>
+  <div id="sidebar">
+    <div class="mui--text-white mui--text-display1 mui--align-vertical">Պռոեկտ երկու
+      <br>
+      <small class="author">By Tigran Grigoryan</small>
+    </div>
+  </div>
+  <div id="content" class="mui-container-fluid">
+    <div class="mui-row">
+      <div class="mui-col-sm-10 mui-col-sm-offset-1">
+        <br>
+        <br>
+        <div class="mui--text-black-54 mui--text-body2 ">Ուղեք հարց</div>
+        <div class="mui-divider"></div>
+        <br>
+        <form class="mui-form" id="form">
+          <div class="mui-textfield mui-textfield--float-label ">
+            <input type="text" id="question-input" required minlength="10" maxlength="200">
+            <label for="question-input">Ինչ ես ուզւմ հարցնես?</label>
+          </div>
+
+          <button type="submit" id="submit" class="mui-btn mui-btn--raised mui-btn--accent" disabled>
+            Ուղարկել հրցը</button>
+        </form>
+        <br>
+        <br>
+        <div class="mui--text-black-54 mui--text-body2">Դձեր հարցերը</div>
+        <div class="mui-divider"></div>
+        <br>
+        <br>
+        <div id="list"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyBAOFfM1nCbsgLPTO_PVoNO-G0cxzLijKk",
+    authDomain: "tigran-question-app.firebaseapp.com",
+    databaseURL: "https://tigran-question-app.firebaseio.com",
+    projectId: "tigran-question-app",
+    storageBucket: "tigran-question-app.appspot.com",
+    messagingSenderId: "270632642274",
+    appId: "1:270632642274:web:a10d03235113800c75a0bb"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+</body>
+
+</html>
